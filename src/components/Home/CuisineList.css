@@ -1,0 +1,20 @@
+.cuisine-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-black);
+  font-family: "Barlow", sans-serif;
+  padding: 0 16em;
+}
+.cuisine-item {
+  display: flex;
+  gap: 0.2em;
+  align-items: center;
+  color: var(--primary-black);
+  list-style: none;
+  font-weight: 500;
+  padding: 0.5em 1em;
+}
+.cuisine-item img {
+  width: 2rem;
+}

@@ -2,13 +2,13 @@ import { useState } from "react";
 import axios from "axios";
 import "./Order.css";
 
-export default function Order() {
+export default function Order({ pizza }) {
   const [size, setSize] = useState("");
   const [thickness, setThickness] = useState("default");
   const [extraIng, setExtraIng] = useState([]);
   const [note, setNote] = useState("");
   const [amount, setAmount] = useState(1);
-  const [increment, setIncrement] = useState(0);
+  //  const [isValid, setIsValid] = useState(false);
 
   const extraIngPrices = extraIng.length * 5;
   const totalPrice = amount * (+pizza.price.slice(0, -1) + extraIngPrices);
@@ -33,7 +33,6 @@ export default function Order() {
     }
     e.preventDefault();
     const id = crypto.randomUUID();
-
     const newOrder = {
       id,
       size,
@@ -42,7 +41,6 @@ export default function Order() {
       note,
     };
 
-    console.log(newOrder);
     setSize("");
     setThickness("default");
     setExtraIng([]);
@@ -73,7 +71,7 @@ export default function Order() {
         <section>
           <div>
             <h3>Boyut seç</h3>
-            {fixedSizes.map((fixedSize) => (
+            {pizza.fixedSizes.map((fixedSize) => (
               <label htmlFor={fixedSize} key={fixedSize}>
                 <input
                   type="radio"
@@ -106,7 +104,7 @@ export default function Order() {
           <h3>Ek Malzemeler</h3>
           <p>En Fazla 10 malzeme seçebilirsiniz. 5₺</p>
           <div>
-            {ekMalzemeler.map((ekMalzeme) => (
+            {pizza.toppings.map((ekMalzeme) => (
               <label key={ekMalzeme}>
                 <input
                   type="checkbox"
@@ -150,7 +148,9 @@ export default function Order() {
             <p>{totalPrice} ₺</p>
           </div>
         </div>
-        <button type="submit">submit</button>
+        <button type="submit" disabled={false}>
+          submit
+        </button>
       </form>
     </div>
   );

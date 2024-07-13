@@ -9,7 +9,20 @@
 }
 
 * {
-  margin: 0;
+  margin: auto;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-white);
+  color: var(--primary-white);
+}
+button {
+  font-family: "Barlow", sans-serif;
+  border-radius: 50px;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.8;
 }
