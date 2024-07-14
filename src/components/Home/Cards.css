@@ -1,0 +1,22 @@
+.card-container {
+  display: flex;
+  color: var(--primary-black);
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow", sans-serif;
+  padding: 0.2em 12em;
+}
+.card-item {
+  list-style: none;
+  text-align: center;
+  background: var(--primary-white);
+  border-radius: 10px;
+  padding: 1.5em 2em;
+}
+.card-item > img {
+  width: 11rem;
+}
+.card-detail {
+  display: flex;
+  justify-content: space-around;
+}

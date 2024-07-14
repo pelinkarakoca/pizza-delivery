@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home/Home";
 import Footer from "./components/Footer";
 import "./App.css";
-import { pizza, cuisines } from "../Assets/mile2-assets/data";
+import { pizza, cuisines, deals } from "../Assets/mile2-assets/data";
 import { Switch, Route } from "react-router-dom";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route path="/" exact>
-          <Home cuisines={cuisines} />
+          <Home cuisines={cuisines} deals={deals} />
         </Route>
         <Route path="/order">
           <Order pizza={pizza} />

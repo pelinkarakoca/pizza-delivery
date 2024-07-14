@@ -1,0 +1,42 @@
+.top-rated-container {
+  color: var(--primary-black);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  margin: 1.5em 0;
+}
+#emphasis {
+  font-family: "Satisfy", sans-serif;
+  color: var(--primary-red);
+  text-transform: lowercase;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.top-rated-main {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.top-rated-button {
+  color: var(--primary-black);
+  font-family: "Barlow", sans-serif;
+  padding: 0.5em 2em;
+  margin: 0.1em;
+  border: 1px solid orangered;
+}
+
+.top-rated-button-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+}
+.top-rated-button img {
+  width: 2rem;
+}
+.top-rated-button:hover {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+}

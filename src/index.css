@@ -21,6 +21,7 @@ button {
   font-family: "Barlow", sans-serif;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
 }
 
 button:hover {
