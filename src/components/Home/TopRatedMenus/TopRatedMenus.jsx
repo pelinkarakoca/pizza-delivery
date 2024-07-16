@@ -1,5 +1,5 @@
 import "./TopRatedMenus.css";
-import Button from "../Button";
+import Button from "../../Button/Button";
 export default function TopRatedMenus({ cuisines }) {
   return (
     <div className="top-rated-container">

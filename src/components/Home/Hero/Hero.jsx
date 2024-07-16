@@ -1,7 +1,14 @@
 import "./Hero.css";
-import Button from "../Button";
+import Button from "../../Button/Button";
+import { useHistory } from "react-router-dom";
 
 export default function Hero() {
+  let history = useHistory();
+
+  function handleNavigation() {
+    history.push("/order");
+  }
+
   return (
     <div className="hero">
       <div className="hero-container">
@@ -10,7 +17,9 @@ export default function Hero() {
           <p>Kod Acıktırır</p>
           <p>Pizza, Doyurur</p>
         </div>
-        <Button className="hero-button">Acıktım</Button>
+        <Button className="hero-button" onClick={handleNavigation}>
+          Acıktım
+        </Button>
       </div>
     </div>
   );

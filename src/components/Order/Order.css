@@ -7,6 +7,7 @@
   width: 50%;
   margin: auto;
   padding: 3em;
+  font-family: "Barlow", sans-serif;
 }
 
 .order-pizza {
@@ -14,9 +15,8 @@
   flex-direction: column;
   gap: 1em;
 }
-.order-pizza h1,
-h2,
-h3 {
+
+.order-pizza > h1 {
   color: var(--primary-black);
   padding: 0.5em;
 }
@@ -31,6 +31,24 @@ h3 {
   gap: 4em;
 }
 
+.order-error {
+  color: var(--primary-red);
+}
+
+.button-amount-change {
+  background-color: var(--primary-orange);
+  padding: 0.3em 0.8em;
+  border-radius: 5px;
+  margin: 0 0.2em;
+}
+.button-form-submit {
+  background-color: var(--primary-orange);
+  padding: 1em 4em;
+  border-radius: 1px;
+}
+.order-summary {
+  border: 1px solid black;
+}
 @media only screen and (max-width: 769px) {
   .order-page {
     margin: 0;

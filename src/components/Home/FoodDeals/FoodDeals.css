@@ -1,0 +1,54 @@
+.deal-container {
+  display: flex;
+  width: 50%;
+  margin-top: 1em;
+}
+
+.top-deal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  font-weight: 700;
+  border-radius: 10px;
+  font-family: "Quattrocento", sans-serif;
+  font-size: 2.5em;
+  padding: 4rem 1rem;
+  color: var(--primary-white);
+}
+.top-deal > p {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+.other-deals {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.25rem;
+  gap: 0.5rem;
+}
+
+.deal-item {
+  margin: 0;
+  flex: 1;
+  padding: 1.53rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.1em;
+  border-radius: 10px;
+}
+
+.deal-button {
+  color: var(--primary-red);
+  padding: 1em 1.5em;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 0.6rem;
+}

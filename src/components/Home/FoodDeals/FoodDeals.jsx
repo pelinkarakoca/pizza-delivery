@@ -1,4 +1,4 @@
-import Button from "../Button";
+import Button from "../../Button/Button";
 import "./FoodDeals.css";
 
 export default function FoodDeals({ deals }) {
@@ -13,7 +13,7 @@ export default function FoodDeals({ deals }) {
       >
         <h3>{deals[0].campaign}</h3>
         <p>{deals[0].name}</p>
-        <Button className="deal-button">Sipariş Ver</Button>
+        <Button className="deal-button">SİPARİŞ VER</Button>
       </div>
       <div className="other-deals">
         <div
@@ -25,7 +25,7 @@ export default function FoodDeals({ deals }) {
         >
           <h3>{deals[1].campaign}</h3>
           <p>{deals[1].name}</p>
-          <Button className="deal-button">Sipariş Ver</Button>
+          <Button className="deal-button">SİPARİŞ VER</Button>
         </div>
         <div
           className="deal-item"
@@ -36,7 +36,7 @@ export default function FoodDeals({ deals }) {
         >
           <h3>{deals[2].campaign}</h3>
           <p>{deals[2].name}</p>
-          <Button className="deal-button">Sipariş Ver</Button>
+          <Button className="deal-button">SİPARİŞ VER</Button>
         </div>
       </div>
     </div>
