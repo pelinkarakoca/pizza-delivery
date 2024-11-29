@@ -1,12 +1,24 @@
 import { useLocation } from "react-router-dom";
 import "./Success.css";
+import { FC } from "react";
+//TODO - interface'leri type diye ayrı bir yere taşı
 
-export default function Success() {
-  const location = useLocation();
+interface LocationState {
+  state: {
+    size: string;
+    thickness: string;
+    extraIng: string[];
+  };
+}
+
+const Success: FC = () => {
+  const location: LocationState = useLocation();
   const data = location.state;
+
   console.log("enter success");
+  console.log("print data");
   console.log(data);
-  console.log(location);
+  console.log(location.state);
 
   return (
     <div className="success">
@@ -17,10 +29,12 @@ export default function Success() {
       <p>Hamur: {data.thickness}</p>
       <p>
         Ek malzemeler:{" "}
-        {data.extraIng.map((item) => (
+        {data?.extraIng.map((item: string) => (
           <span key={item}>{item} </span>
         ))}{" "}
       </p>
     </div>
   );
-}
+};
+
+export default Success;
