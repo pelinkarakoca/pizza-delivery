@@ -18,15 +18,14 @@ const Success: FC = () => {
   console.log("enter success");
   console.log("print data");
   console.log(data);
-  console.log(location.state);
 
   return (
     <div className="success">
       <p>Lezzetin yolda</p>
       <p> Sipariş Alındı.</p>
       <h6>Position Absolute Acı Pizza</h6>
-      <p>Boyut: {data.size}</p>
-      <p>Hamur: {data.thickness}</p>
+      <p>Boyut: {data?.size}</p>
+      <p>Hamur: {data?.thickness}</p>
       <p>
         Ek malzemeler:{" "}
         {data?.extraIng.map((item: string) => (
