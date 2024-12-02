@@ -1,6 +1,8 @@
 import "./Footer.css";
 import "../../../Assets/mile2-assets/footer/icons/icon-1.png";
-export default function Footer() {
+import React, { FC } from "react";
+
+const Footer: FC = () => {
   return (
     <div className="footer">
       <div className="footer-contact">
@@ -44,4 +46,6 @@ export default function Footer() {
       </div>
     </div>
   );
-}
+};
+
+export default Footer;

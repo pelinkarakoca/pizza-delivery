@@ -1,10 +1,20 @@
-export default function Button({
+import React, { FC, ReactNode } from "react";
+
+interface ButtonProps {
+  className?: string;
+  onClick?: () => void;
+  children: ReactNode;
+  type?: "button";
+  disabled?: boolean;
+}
+
+const Button: FC<ButtonProps> = ({
   className = "",
   onClick,
   children,
   type = "button",
   disabled = false,
-}) {
+}) => {
   return (
     <button
       type={type}
@@ -15,4 +25,6 @@ export default function Button({
       {children}
     </button>
   );
-}
+};
+
+export default Button;

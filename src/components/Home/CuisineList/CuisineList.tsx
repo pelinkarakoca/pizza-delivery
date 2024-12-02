@@ -1,6 +1,15 @@
 import "./CuisineList.css";
+import React, { FC } from "react";
 
-export default function CuisineList({ cuisines }) {
+interface CuisineListProps {
+  cuisines: Cuisine[];
+}
+interface Cuisine {
+  cuisineName: string;
+  img: string;
+}
+
+const CuisineList: FC<CuisineListProps> = ({ cuisines }) => {
   console.log(cuisines);
   return (
     <div className="cuisine-container">
@@ -14,4 +23,5 @@ export default function CuisineList({ cuisines }) {
       </ul>
     </div>
   );
-}
+};
+export default CuisineList;

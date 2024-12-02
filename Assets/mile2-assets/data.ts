@@ -11,10 +11,20 @@ import pz1 from "./pictures/food-1.png";
 import pz2 from "./pictures/food-2.png";
 import brg1 from "./pictures/food-2.png";
 
-const pizza = {
+interface Pizza {
+  name: string;
+  description: string;
+  price: string;
+  rate: number;
+  comments: number;
+  toppings: string[];
+  fixedSizes: string[];
+}
+
+const pizza: Pizza = {
   name: "Position Absolute Acı Pizza",
   description:
-    "Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre. Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli bir yemektir. . Küçük bir pizzaya bazen pizzetta denir.",
+    "Frontend Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre. Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli bir yemektir. . Küçük bir pizzaya bazen pizzetta denir.",
   price: "85.50₺",
   rate: 4.9,
   comments: 200,
@@ -37,8 +47,25 @@ const pizza = {
   fixedSizes: ["Küçük", "Orta", "Büyük"],
 };
 
-const cuisines = [
-  { cuisineName: "Kore", img: img1, menu: [{}] },
+interface MenuItem {
+  name: string;
+  img: string;
+  description: string;
+  price: string;
+  rate: number;
+  comments: number;
+  toppings: string[];
+  fixedSizes: string[];
+}
+
+interface Cuisine {
+  cuisineName: string;
+  img: string;
+  menu: MenuItem[];
+}
+
+const cuisines: Cuisine[] = [
+  { cuisineName: "Kore", img: img1, menu: [] },
   {
     cuisineName: "Pizza",
     img: img2,
@@ -100,22 +127,26 @@ const cuisines = [
   {
     cuisineName: "Burger",
     img: img3,
-    menu: [
-      {
-        name: "useEffect Tavuklu Burger ",
-        price: "60.50₺",
-        img: brg1,
-        rate: 4.9,
-        comments: 200,
-      },
-    ],
+    menu: {
+      name: "useEffect Tavuklu Burger ",
+      price: "60.50₺",
+      img: brg1,
+      rate: 4.9,
+      comments: 200,
+    },
   },
-  { cuisineName: "Kızartmalar", img: img4, menu: [{}] },
-  { cuisineName: "Fast Food", img: img5, menu: [{}] },
-  { cuisineName: "Gazlı içecek", img: img6, menu: [{}] },
+  { cuisineName: "Kızartmalar", img: img4, menu: [] },
+  { cuisineName: "Fast Food", img: img5, menu: [] },
+  { cuisineName: "Gazlı içecek", img: img6, menu: [] },
 ];
 
-const deals = [
+interface Deal {
+  campaign: string;
+  name?: string;
+  img: string;
+}
+
+const deals: Deal[] = [
   {
     campaign: "Özel Lezzetus",
     name: "Position: Absolute Acı Pizza",
@@ -124,4 +155,5 @@ const deals = [
   { campaign: "Hackathlon Burger Menü", img: bg2 },
   { campaign: "Çoook hızlı npm gibi kurye", img: bg3 },
 ];
+
 export { pizza, cuisines, deals };

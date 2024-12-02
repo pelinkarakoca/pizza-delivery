@@ -1,7 +1,8 @@
+import React, { FC } from "react";
 import Card from "./Card";
 import "./Cards.css";
 
-export default function Cards() {
+const Cards: FC = () => {
   return (
     <div className="card-container">
       <Card
@@ -21,4 +22,6 @@ export default function Cards() {
       />
     </div>
   );
-}
+};
+
+export default Cards;

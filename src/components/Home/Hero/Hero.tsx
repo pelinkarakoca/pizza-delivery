@@ -1,13 +1,14 @@
 import "./Hero.css";
 import Button from "../../Button/Button";
 import { useHistory } from "react-router-dom";
+import React, { FC } from "react";
 
-export default function Hero() {
-  let history = useHistory();
+const Hero: FC = () => {
+  const history = useHistory();
 
-  function handleNavigation() {
+  const handleNavigation = (): void => {
     history.push("/order");
-  }
+  };
 
   return (
     <div className="hero">
@@ -23,4 +24,6 @@ export default function Hero() {
       </div>
     </div>
   );
-}
+};
+
+export default Hero;

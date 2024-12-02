@@ -1,7 +1,18 @@
+import React, { FC } from "react";
 import Button from "../../Button/Button";
 import "./FoodDeals.css";
 
-export default function FoodDeals({ deals }) {
+interface Deal {
+  img: string;
+  campaign: string;
+  name: string;
+}
+
+interface FoodDealsProps {
+  deals: Deal[];
+}
+
+const FoodDeals: FC<FoodDealsProps> = ({ deals }) => {
   return (
     <div className="deal-container">
       <div
@@ -41,4 +52,6 @@ export default function FoodDeals({ deals }) {
       </div>
     </div>
   );
-}
+};
+
+export default FoodDeals;

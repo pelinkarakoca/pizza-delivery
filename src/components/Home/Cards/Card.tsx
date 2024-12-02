@@ -1,4 +1,12 @@
-export default function Card({ className, img, text }) {
+import React, { FC } from "react";
+
+interface CardProps {
+  className: string;
+  img: string;
+  text: string;
+}
+
+const Card: FC<CardProps> = ({ className, img, text }) => {
   return (
     <li className={className}>
       <img src={img} alt={img} />
@@ -14,4 +22,6 @@ export default function Card({ className, img, text }) {
       </div>
     </li>
   );
-}
+};
+
+export default Card;
